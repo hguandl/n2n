@@ -1,3 +1,16 @@
+# n2n_v2 modifed for Openwrt
+
+To compile the binary files used on Openwrt, toolchain is needed. After that, please edit n2n_v2/CMakeLists.txt. The first several lines need to be changed:
+```
+SET(CMAKE_SYSTEM_NAME Linux)
+SET(CMAME_C_COMPILER mips-openwrt-linux-gcc)
+SET(CMAKE_CXX_COMPILER mips-openwrt-linux-g++)
+SET(CMAKE_FIND_ROOT_PATH ~/mips_34kc_gcc)
+```
+Modify them according to the develop environment you are using.
+
+---
+
 This is the current development branch of the n2n p2p vpn software.
 
 http://www.ntop.org/products/n2n/
